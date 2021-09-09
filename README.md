@@ -1,2 +1,1 @@
-# leetcode
-leetcode programs
+# LEET CODE PRACTICE PROGRAMS

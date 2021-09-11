@@ -1,4 +1,6 @@
 class SolutionFibonacci:
+    # Time complexity: O(2^N)
+    # Space complexity: O(N)
     def fib(self, the_num: int) -> int:
         if the_num <= 1:
             return the_num

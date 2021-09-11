@@ -1,5 +1,5 @@
 from commons.linked_list import LinkedList
-from easy.p1290ConvertBinaryLinkedToInteger import SolutionDecimalToBinary
+from easy.p1290BinaryLinkedToInteger import SolutionDecimalToBinary
 import pytest
 
 decimal_linkedlist = [

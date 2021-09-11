@@ -1,14 +1,14 @@
 '''
 Reference Link - https://www.youtube.com/watch?v=CyxbuJwA-0g
 '''
-from commons.linked_list import Node
+from commons.LinkedList import Node
 
 
 class SolutionDecimalToBinary:
     def get_decimal_value(self, node: Node) -> int:
         decimal_val = 0
         while node:
-            decimal_val = decimal_val * 2 + node.data
+            decimal_val = decimal_val * 2 + node.val
             node = node.next
         return decimal_val
 
@@ -16,6 +16,6 @@ class SolutionDecimalToBinary:
         # multiplying by 1 is equivalent to left shifting
         decimal_val = 0
         while node:
-            decimal_val = decimal_val << 1 | node.data
+            decimal_val = decimal_val << 1 | node.val
             node = node.next
         return decimal_val

@@ -1,10 +1,10 @@
 class Node:
     def __init__(self, data):
-        self.data = data
+        self.val = data
         self.next = None
 
     def __repr__(self):
-        return str(self.data)
+        return str(self.val)
 
 
 class LinkedList:
@@ -18,7 +18,7 @@ class LinkedList:
         node1 = self.head
         node2 = other.head
         while node1 is not None and node2 is not None:
-            if node1.data != node2.data:
+            if node1.val != node2.val:
                 return False
             node1 = node1.next
             node2 = node2.next
@@ -28,7 +28,7 @@ class LinkedList:
         node = self.head
         nodes = list()
         while node is not None:
-            nodes.append(str(node.data))
+            nodes.append(str(node.val))
             node = node.next
         return ' -> '.join(nodes)
 
@@ -84,14 +84,14 @@ class LinkedList:
     def remove(self, key_elem) -> int:
         if self.head is None:
             return -1
-        if self.head.data == key_elem:
+        if self.head.val == key_elem:
             self.head = self.head.next
             return 0
         index = 0
         node = self.head
         prev_node = self.head
         while node is not None:
-            if node.data == key_elem:
+            if node.val == key_elem:
                 prev_node.next = node.next
                 return index
             prev_node = node
@@ -104,13 +104,13 @@ class LinkedList:
             return None
         node = self.head
         self.head = self.head.next
-        return node.data
+        return node.val
 
     def remove_tail(self):
         if self.head is None:
             return None
         elif self.head.next is None:
-            data = self.head.data
+            data = self.head.val
             self.head = None
             return data
         node = self.head
@@ -119,7 +119,7 @@ class LinkedList:
             prev_node = node
             node = node.next
         prev_node.next = None
-        return node.data
+        return node.val
 
     def remove_index(self, index):
         if index < 0:
@@ -144,7 +144,7 @@ class LinkedList:
             return -1
         node = self.head
         while node is not None:
-            if node.data == key_elem:
+            if node.val == key_elem:
                 return index
             node = node.next
             index = index + 1

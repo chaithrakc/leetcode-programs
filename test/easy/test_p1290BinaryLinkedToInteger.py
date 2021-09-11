@@ -1,4 +1,4 @@
-from commons.linked_list import LinkedList
+from commons.LinkedList import LinkedList
 from easy.p1290BinaryLinkedToInteger import SolutionDecimalToBinary
 import pytest
 

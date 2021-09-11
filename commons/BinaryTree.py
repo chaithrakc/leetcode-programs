@@ -15,28 +15,22 @@ class BinaryTree:
     root = None
 
     def __init__(self, *params):
-        for item in params:
-            self.insert(item)
+        self.root = self.insert_levelorder(list(params), self.root, 0, len(params))
 
-    def __insert_helper(self, cur_node: TreeNode, data: Any) -> TreeNode:
-        if not cur_node:
-            return TreeNode(data)
-        if data < cur_node.val:
-            cur_node.left = self.__insert_helper(cur_node.left, data)
-        elif data > cur_node.val:
-            cur_node.right = self.__insert_helper(cur_node.right, data)
-        else:
-            return cur_node  # value already exists
+    def insert_levelorder(self, arr: List, cur_node: TreeNode, i: int, n: int) -> TreeNode:
+        if i < n:
+            temp = TreeNode(arr[i])
+            cur_node = temp
+            cur_node.left = self.insert_levelorder(arr, cur_node.left, 2 * i + 1, n)  # insert left child
+            cur_node.right = self.insert_levelorder(arr, cur_node.right, 2 * i + 2, n)  # insert right child
         return cur_node
 
-    def insert(self, data: Any):
-        self.root = self.__insert_helper(self.root, data)
-
+    # preorder
     def repr_helper(self, node: TreeNode, nodes: List):
         if node:
             nodes.append(str(node.val))
-            self.repr_helper(node.left,nodes)
-            self.repr_helper(node.right,nodes)
+            self.repr_helper(node.left, nodes)
+            self.repr_helper(node.right, nodes)
 
     # pre-order tranversal: root, left, right
     def __repr__(self) -> str:

@@ -15,3 +15,8 @@ class TestSolutionFibonacci:
     @pytest.mark.parametrize('num, exepcted_sum', fib_test)
     def test_fib(self, num: int, exepcted_sum: int) -> None:
         assert self.solution.fib(num) == exepcted_sum
+
+    @pytest.mark.parametrize('num, exepcted_sum', fib_test)
+    def test_fib_iterative(self, num: int, exepcted_sum: int) -> None:
+        assert self.solution.fib_iterative(num) == exepcted_sum
+

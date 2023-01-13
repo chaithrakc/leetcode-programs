@@ -3,29 +3,18 @@ from typing import List
 
 class SolutionMaximumUnitsTruck:
     def maximum_units(self, box_types: List[List[int]], truck_size: int) -> int:
-
         # sorting in based on units per box in descending order
         box_types.sort(key=lambda x: x[1], reverse=True)
 
-        boxes_loaded = 0
-        max_units = 0
+        unit_count = 0
 
-        # iterating over each box
+        # loading boxes onto truck
         for box_type in box_types:
-            num_boxes = box_type[0]
-            num_units_per_box = box_type[1]
-            # loading boxes onto truck
-            for box in range(num_boxes):
-                if boxes_loaded >= truck_size:  # number of boxes on the truck should not exceed truckSize
-                    return max_units
-                boxes_loaded = boxes_loaded + 1
-                max_units = max_units + num_units_per_box
+            box_count = min(box_type[0], truck_size)  # to ensure number of boxes on the truck should not
+            # exceed truckSize
+            unit_count = unit_count + box_count * box_type[1]
+            truck_size = truck_size - box_count
+            if truck_size == 0:
+                break
 
-        # use case: number of boxes provided are less than truck size
-        return max_units
-
-
-
-
-
-
+        return unit_count

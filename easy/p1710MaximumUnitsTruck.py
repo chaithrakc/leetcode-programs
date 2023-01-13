@@ -18,3 +18,5 @@ class SolutionMaximumUnitsTruck:
                 break
 
         return unit_count
+
+# Time Complexity: O(nlogn) sorting + O(n) for loop = O(nlogn)

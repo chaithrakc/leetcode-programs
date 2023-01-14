@@ -4,7 +4,8 @@ from easy.p242ValidAnagram import SolutionValidAnagram
 
 valid_anagram_testcases = [
     ('anagram', 'nagaram', True),
-    ('rat', 'car', False)
+    ('rat', 'car', False),
+    ('ab', 'a', False)
 ]
 
 

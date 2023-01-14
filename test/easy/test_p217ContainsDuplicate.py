@@ -7,6 +7,7 @@ from easy.p217ContainsDuplicate import SolutionContainsDuplicate
 test_cases_duplicates = [
     ([1, 2, 3, 1], True),
     ([1, 2, 3, 4], False),
+    ([1, 1, 1, 3, 3, 4, 3, 2, 4, 2], True)
 ]
 
 

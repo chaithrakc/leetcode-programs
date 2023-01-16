@@ -15,5 +15,9 @@ class TestSolutionTwoSum:
     solution = SolutionTwoSum()
 
     @pytest.mark.parametrize('nums, target, indices', two_sum_testcases)
-    def test_two_sum(self, nums: List[int], target: int, indices: List[int]):
-        assert self.solution.two_sum(nums, target) == indices
+    def test_two_sum_bruteforce(self, nums: List[int], target: int, indices: List[int]):
+        assert self.solution.two_sum_bruteforce(nums, target) == indices
+
+    @pytest.mark.parametrize('nums, target, indices', two_sum_testcases)
+    def test_two_sum_optimized(self, nums: List[int], target: int, indices: List[int]):
+        assert self.solution.two_sum_optimized(nums, target) == indices

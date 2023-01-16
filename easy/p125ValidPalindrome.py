@@ -1,11 +1,13 @@
 class SolutionValidPalindrome:
     @staticmethod
     def isPalindrome(s: str) -> bool:
-        input_str = list()
+        input_char_list = list()
 
         # removing non-alphabetically characters and applying lowercase transformation
         for char in s:
             if str.isalpha(char):
-                input_str.append(char.lower())
+                input_char_list.append(char.lower())
 
-        return input_str == input_str[::-1]
+        reversed_char_list = input_char_list[::-1]
+
+        return input_char_list == reversed_char_list

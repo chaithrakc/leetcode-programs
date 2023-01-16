@@ -16,9 +16,12 @@ class SolutionTwoSum:
 
     @staticmethod
     def two_sum_optimized(nums: List[int], target: int) -> List[int]:
-        hashmap = dict()
+        prev_nums = dict() # key:number, value=index
         for i in range(len(nums)):
-            complement = target - nums[i]
-            if complement in hashmap:
-                return [hashmap[complement], i]
-            hashmap[nums[i]] = i  # key:number, value=index
+            diff = target - nums[i]
+            if diff in prev_nums:
+                return [prev_nums[diff], i]
+            prev_nums[nums[i]] = i
+
+    # Time Complexity: O(n)
+    # Space Complexity: O(n)

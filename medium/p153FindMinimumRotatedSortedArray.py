@@ -5,7 +5,7 @@ class SolutionFindMin:
     @staticmethod
     def findMin(nums: List[int]) -> int:
 
-        # if the list has only one element
+        # if the array has only one element
         if len(nums) == 1:
             return nums[0]
 
@@ -27,6 +27,7 @@ class SolutionFindMin:
 
             if nums[mid_ptr] > nums[left_ptr]: # search on right hand side
                 left_ptr = mid_ptr + 1
+
             elif nums[mid_ptr] < nums[left_ptr]: # search on left hand side
                 right_ptr = mid_ptr - 1
 

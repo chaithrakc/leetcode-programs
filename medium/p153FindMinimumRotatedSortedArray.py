@@ -30,12 +30,3 @@ class SolutionFindMin:
 
             elif nums[mid_ptr] < nums[left_ptr]: # search on left hand side
                 right_ptr = mid_ptr - 1
-
-
-
-
-
-
-
-
-

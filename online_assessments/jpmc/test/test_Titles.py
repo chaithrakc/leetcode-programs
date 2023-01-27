@@ -1,6 +1,6 @@
 import pytest
 
-from jpmc.Titles import SolutionTitles
+from online_assessments.jpmc.Titles import SolutionTitles
 
 titles_testcases = [
     ('Hello world', 'Hello World'),

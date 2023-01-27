@@ -1,4 +1,4 @@
-from jpmc.CheckSum import SolutionCheckSum
+from online_assessments.jpmc.CheckSum import SolutionCheckSum
 import pytest
 
 check_sum_tests = [

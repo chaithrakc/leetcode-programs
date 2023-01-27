@@ -1,6 +1,6 @@
 import pytest
 
-from jpmc.p509FibonacciNumber import SolutionFibonacci
+from online_assessments.jpmc.p509FibonacciNumber import SolutionFibonacci
 
 fib_test = [
     (2, 1),

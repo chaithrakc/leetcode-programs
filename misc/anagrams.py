@@ -12,13 +12,10 @@ def get_anagrams_counter(input_strings_list: List[str], test_string: str) -> Non
     output_strings = list(filter(lambda x: Counter(test_string.lower()) == Counter(x.lower()),
                                  input_strings_list))
 
-    print("*******************")
+    print('\n *********************** Using lambda and Counter object ***********************')
     print("input_string_list = {}".format(input_strings_list))
-
     print("test_string = {}".format(test_string))
-
     print("out_string_list = {}".format(output_strings))
-    print("*******************\n")
 
 
 def get_anagrams(input_strings_list: List[str], test_string: str) -> None:
@@ -41,21 +38,15 @@ def get_anagrams(input_strings_list: List[str], test_string: str) -> None:
         if counter_table_teststr == counter_table_input_str:
             output_strings.append(the_str)
 
-    print("*******************")
+    print('\n *********************** Using dictionaries  ***********************')
     print("input_string_list = {}".format(input_strings_list))
-
     print("test_string = {}".format(test_string))
-
     print("out_string_list = {}".format(output_strings))
-    print("*******************\n")
-
-
-def driver():
-    input_string_list = ['Python', 'Program', 'Machine', 'yPtnoh', 'Learning']
-    test_string = "ntoyPh"
-    # get_anagrams(input_string_list, test_string)
-    get_anagrams_counter(input_string_list, test_string)
 
 
 if __name__ == '__main__':
-    driver()
+    input_string_list = ['Python', 'Program', 'Machine', 'yPtnoh', 'Learning']
+    test_string = "ntoyPh"
+    get_anagrams(input_string_list, test_string)
+    get_anagrams_counter(input_string_list, test_string)
+

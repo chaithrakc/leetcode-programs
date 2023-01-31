@@ -17,10 +17,7 @@ def get_palindromes(input_strings:List[str]):
     print('Palindromes with reverse function= {}'.format(palindromes_reverse_func))
     print("*******************\n")
 
-def driver():
+if __name__ == '__main__':
     input_string_list = ['Python', 'Radar', 'CSharp', 'Madam', 'Programmer', 'Noon', 'Refer', 'Php', 'Go']
     get_palindromes(input_string_list)
 
-
-if __name__ == '__main__':
-    driver() # call driver function

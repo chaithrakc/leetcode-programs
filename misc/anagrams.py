@@ -24,16 +24,14 @@ def get_anagrams(input_strings_list: List[str], test_string: str) -> None:
 
     counter_table_teststr = dict()
     for char in test_string.lower():
-        counter_table_teststr[char] = counter_table_teststr.get(char, 0)
-        counter_table_teststr[char] = counter_table_teststr[char] + 1
+        counter_table_teststr[char] = counter_table_teststr.get(char, 0) + 1
 
     for the_str in input_strings_list:
         if len(the_str) != len(test_string):
             continue
         counter_table_input_str = dict()
         for char in the_str.lower():
-            counter_table_input_str[char] = counter_table_input_str.get(char, 0)
-            counter_table_input_str[char] = counter_table_input_str[char] + 1
+            counter_table_input_str[char] = counter_table_input_str.get(char, 0) + 1
 
         if counter_table_teststr == counter_table_input_str:
             output_strings.append(the_str)

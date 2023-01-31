@@ -5,12 +5,10 @@ class SolutionValidAnagram:
 
         count_table = dict()
         for char in s:
-            count_table[char] = count_table.get(char, 0)
-            count_table[char] = count_table[char] + 1
+            count_table[char] = count_table.get(char, 0) + 1
 
         for char in t:
-            count_table[char] = count_table.get(char, 0)
-            count_table[char] = count_table[char] - 1
+            count_table[char] = count_table.get(char, 0) - 1
             if count_table[char] < 0:
                 return False
 

@@ -10,5 +10,5 @@ class SolutionContainsDuplicate:
             hashset.add(the_num)
         return False
 
-    # Time Complexity: O(n) - for loop
-    # Space Complexity: O(n) - set
+# Time Complexity: O(n) - for loop
+# Space Complexity: O(n) - set

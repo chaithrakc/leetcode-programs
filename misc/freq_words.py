@@ -14,8 +14,8 @@ Using List to count the word frequency in a string
 4. In the loop, the count() function will give us the count of each unique word present in the parent string.
 """
 
-def get_word_freq_approach1(input_string:str) -> None:
-    input_str_list = input_string.split()
+def get_word_freq_approach1(text:str) -> None:
+    input_str_list = text.split()
 
     unique_str_list = list()
     for the_str in input_str_list:
@@ -28,18 +28,18 @@ def get_word_freq_approach1(input_string:str) -> None:
 """
 Using Python set method to get the word frequency
 """
-def get_word_freq_approach2(input_string:str) -> None:
-    input_str_list = input_string.split()
+def get_word_freq_approach2(text:str) -> None:
+    input_str_list = text.split()
     unique_strings = set(input_str_list)
     for entry in unique_strings:
         print('Word Frequency [{}]:{}'.format(entry, input_str_list.count(entry)))
 
 def driver():
-   input_string ='python csharp javascript php python javascript csharp python csharp php'
+   text ='python csharp javascript php python javascript csharp python csharp php'
    print('************************ Approach 1 ******************************')
-   get_word_freq_approach1(input_string)
+   get_word_freq_approach1(text)
    print('\n************************ Approach 2 ******************************')
-   get_word_freq_approach2(input_string)
+   get_word_freq_approach2(text)
 
 if __name__=="__main__":
    driver()

@@ -34,12 +34,26 @@ def get_word_freq_approach2(text:str) -> None:
     for entry in unique_strings:
         print('Word Frequency [{}]:{}'.format(entry, input_str_list.count(entry)))
 
+"""
+Using Python dictionaries get the word frequency
+"""
+def get_word_freq_dicts(text:str) -> None:
+    words = text.split()
+    word_count = dict()
+    for word in words:
+        word_count[word] = word_count.get(word, 0)
+        word_count[word] = word_count[word] + 1
+
+    print(word_count)
+
 def driver():
    text ='python csharp javascript php python javascript csharp python csharp php'
    print('************************ Approach 1 ******************************')
    get_word_freq_approach1(text)
    print('\n************************ Approach 2 ******************************')
    get_word_freq_approach2(text)
+   print('\n************************ Approach 3 ******************************')
+   get_word_freq_dicts(text)
 
 if __name__=="__main__":
    driver()

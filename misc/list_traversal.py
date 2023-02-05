@@ -27,6 +27,8 @@ capitals = [ 'Washington, D.C.', 'Berlin', 'Paris', 'Delhi', 'Beijing']
 population = [ 702000, 3570000, 2140000, 19000000, 21500000]
 
 for country, capital, size in zip(countries, capitals, population):
-    print('{0:<10} {1:<20} {2:>5}'.format(country, capital, size))
+    print('{0:<10} {1:<20} {2:<5}'.format(country, capital, size)) # left justified, number of characters
+
+
 
 

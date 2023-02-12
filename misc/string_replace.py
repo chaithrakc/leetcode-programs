@@ -13,7 +13,7 @@ Parameters:
 
 Returns:
 
- Returns a copy of the old string with the new after replacement.
+ Returns a new copy of the string.
 
 """
 

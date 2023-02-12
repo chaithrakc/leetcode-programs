@@ -9,13 +9,11 @@ class SolutionFibonacci:
 
     # Time Complexity: O(n)
     # Space Complexity: O(1)
-    def fib_iterative(self, the_num: int) -> int:
-        if the_num <= 1:
-            return the_num
+    def fib_iterative(self, fib_value_at_index: int) -> int:
         prev1 = 0  # fib(0)
         prev2 = 1  # fib(1)
-        current = 0
-        for num in range(2, the_num + 1):  # range is exclusive of the end term, we need to put the_num + 1
-            current = prev2 + prev1
-            prev2, prev1 = current, prev2
-        return current
+        fib_number = 0
+        for num in range(fib_value_at_index):
+            fib_number = prev2 + prev1
+            prev1, prev2 = prev2, fib_number
+        return prev1

@@ -1,4 +1,4 @@
-# Conversion of a mixed list to a string using join()
+# Convert list of a mixed datatypes to a string
 
 """
 

@@ -5,7 +5,8 @@ from easy.p242ValidAnagram import SolutionValidAnagram
 valid_anagram_testcases = [
     ('anagram', 'nagaram', True),
     ('rat', 'car', False),
-    ('ab', 'a', False)
+    ('ab', 'a', False),
+    ('Python', 'nPthyo', True)
 ]
 
 

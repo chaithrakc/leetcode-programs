@@ -4,10 +4,10 @@ class SolutionValidAnagram:
             return False
 
         count_table = dict()
-        for char in s:
+        for char in s.lower():
             count_table[char] = count_table.get(char, 0) + 1
 
-        for char in t:
+        for char in t.lower():
             count_table[char] = count_table.get(char, 0) - 1
             if count_table[char] < 0:
                 return False

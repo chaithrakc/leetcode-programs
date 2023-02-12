@@ -1,4 +1,4 @@
-from online_assessments.jpmc.CheckSum import SolutionCheckSum
+from online_assessments.jpmc.ValidateCreditCardNumber import SolutionCheckSum
 import pytest
 
 check_sum_tests = [
@@ -22,4 +22,4 @@ class TestSolutionCheckSum:
 
     @pytest.mark.parametrize('card_num, is_valid',valid_card_tests)
     def test_valid_card(self, card_num:str, is_valid:bool):
-        assert self.solution.valid_card(card_num) == is_valid
+        assert self.solution.is_valid_card(card_num) == is_valid

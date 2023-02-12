@@ -2,7 +2,7 @@ dict_1 = {"alpha": 1, "bravo": 2, "charlie": 3, "delta": 4}
 dict_2 = {"alpha": 1, "bravo": 2, "charlie": 3, "delta": 3, "claim":3, 'zealous':3}
 
 def my_func(test_dict, n):
-    # sorting values in descending order if there are duplicate keys then sort keys in ascending order
+    # sorting values in descending order if there are duplicate values then sort based on keys in alphabetically
     sorted_items_list = sorted(test_dict.items(), key=lambda x: (-x[1], x[0]))
     print(sorted_items_list)
     return sorted_items_list[n-1][0]

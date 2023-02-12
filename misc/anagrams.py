@@ -33,6 +33,7 @@ def get_anagrams(input_strings_list: List[str], test_string: str) -> None:
         for char in the_str.lower():
             counter_table_input_str[char] = counter_table_input_str.get(char, 0) + 1
 
+        # comparing the two dictionaries with equal operator
         if counter_table_teststr == counter_table_input_str:
             output_strings.append(the_str)
 

@@ -15,7 +15,7 @@ Using List to count the word frequency in a string
 """
 
 def get_word_freq_approach1(text:str) -> None:
-    input_str_list = text.split()
+    input_str_list = text.lower().split()
 
     unique_str_list = list()
     for the_str in input_str_list:
@@ -29,7 +29,7 @@ def get_word_freq_approach1(text:str) -> None:
 Using Python set method to get the word frequency
 """
 def get_word_freq_approach2(text:str) -> None:
-    input_str_list = text.split()
+    input_str_list = text.lower().split()
     unique_strings = set(input_str_list)
     for entry in unique_strings:
         print('Word Frequency [{}]:{}'.format(entry, input_str_list.count(entry)))
@@ -38,11 +38,10 @@ def get_word_freq_approach2(text:str) -> None:
 Using Python dictionaries get the word frequency
 """
 def get_word_freq_dicts(text:str) -> None:
-    words = text.split()
+    words = text.lower().split()
     word_count = dict()
     for word in words:
-        word_count[word] = word_count.get(word, 0)
-        word_count[word] = word_count[word] + 1
+        word_count[word] = word_count.get(word, 0) + 1
 
     print(word_count)
 

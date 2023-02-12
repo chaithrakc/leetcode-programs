@@ -13,5 +13,5 @@ class SolutionTitles:
 
     @staticmethod
     def cap_sentence(text: str) -> str:
-        words = [word[0].upper() + word[1:] for word in text.split()]
+        words = [word[0].upper() + word[1:].lower() for word in text.split()]
         return ' '.join(words)

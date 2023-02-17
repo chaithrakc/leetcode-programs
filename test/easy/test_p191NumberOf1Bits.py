@@ -1,6 +1,6 @@
 import pytest
 
-from easy.p191HammingWeight import SolutionHammingWeight
+from easy.p191NumberOf1Bits import SolutionHammingWeight
 
 bitmanipulation_tests = [
     (0b00000000000000000000000000001011, 3),

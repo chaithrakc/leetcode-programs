@@ -2,8 +2,8 @@ class SolutionHammingWeight:
     def hamming_weight(self, n: int) -> int:
         res = 0
         while n > 0:
-            res += n % 2
-            n = n >> 1 # right shifting
+            res += n % 2 # mod with 2 to determine if last bit is 1 or 0
+            n = n >> 1 # right shifting to get to the next bit
         return res
 
     def hamming_weight_optimized(self, n:int) -> int:

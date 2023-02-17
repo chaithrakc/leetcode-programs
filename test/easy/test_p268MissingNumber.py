@@ -16,3 +16,8 @@ class TestSolutionMissingNumber:
     @pytest.mark.parametrize('nums, missing_num',missing_number_tests)
     def test_missing_number(self, nums:List[int], missing_num:int):
         assert self.sol.missingNumber(nums) == missing_num
+
+    @pytest.mark.parametrize('nums, missing_num', missing_number_tests)
+    def test_missing_number_xor(self, nums: List[int], missing_num: int):
+        assert self.sol.missing_number_using_xor(nums) == missing_num
+

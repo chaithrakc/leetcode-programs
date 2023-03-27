@@ -9,8 +9,8 @@ from collections import Counter
 
 
 def get_anagrams_counter(input_strings_list: List[str], test_string: str) -> None:
-    output_strings = list(filter(lambda x: Counter(test_string.lower()) == Counter(x.lower()),
-                                 input_strings_list))
+    test_counter = Counter(test_string.lower())
+    output_strings = list(filter(lambda x: test_counter == Counter(x.lower()), input_strings_list))
 
     print('\n *********************** Using lambda and Counter object ***********************')
     print("input_string_list = {}".format(input_strings_list))

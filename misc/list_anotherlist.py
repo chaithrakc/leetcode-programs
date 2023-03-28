@@ -35,5 +35,5 @@ else :
 # set() method
 set1 = set(list1)
 set2 = set(list2)
-common_elems = set1.intersection(set2)
+common_elems = set1.intersection(set2) # returns set of intersecting elements
 print(common_elems)

@@ -15,3 +15,8 @@ class SolutionTitles:
     def cap_sentence(text: str) -> str:
         words = [word[0].upper() + word[1:].lower() for word in text.split()]
         return ' '.join(words)
+
+if __name__ == '__main__':
+    text = "view the latest news and breaking news today for U.S., world, weather, entertainment, politics and health at CNN.com."
+    print(SolutionTitles.generate_titles(text))
+    print(SolutionTitles.cap_sentence(text))

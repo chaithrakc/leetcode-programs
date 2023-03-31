@@ -16,6 +16,21 @@ Output: 5
 (0,3) = 1 + 3 = 4 (which is a power of 2)
 (2,2) = 2 + 2 = 4 (which is a power of 2)
 Therefore, there are 5 pairs of indices whose array values sum is a power of 2 so the output is 5.
+
+In case, you may not use the same element twice.
+for loop will change:
+```
+    for i in range(31):
+        target = 2 ** i
+        prev_nums_set = set() # works because of commutative property of addition
+        for num in numbers:
+            diff = target - num
+            if diff in prev_nums_set:
+                count += 1
+            prev_nums_set.add(num) # add it to the set after processing the current element to avoid using same
+            element twice
+    return count
+```
 """
 from typing import List
 

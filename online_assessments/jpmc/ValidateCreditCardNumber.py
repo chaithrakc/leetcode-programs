@@ -20,23 +20,30 @@ two digits to get a single-digit number.
 the number 4388 5760 1840 2626 is invalid, but the number 4388 5760 1841 0707 is valid.
 
 '''
-
+from typing import List
 class SolutionCheckSum:
 
     # converts a string or int into list of numeric digits
-    def get_digits(self, num):
+    def get_digits(self, num) -> List[int]:
         return list(map(int, str(num)))
 
-    def find_check_sum(self, card_num) -> int:
+    def find_check_sum(self, card_num:str) -> int:
         digits = self.get_digits(card_num) # converting string into list of digits
-        doubling_digits = digits[-2::-2] # digits that needs to be doubled
-        single_digits =  digits[-1::-2]
-        check_sum = sum(single_digits)
-        for digit in doubling_digits:
+        even_positions = digits[-2::-2] # digits that needs to be doubled
+        odd_positions =  digits[-1::-2]
+        check_sum = sum(odd_positions)
+        for digit in even_positions:
             check_sum += sum(self.get_digits(digit * 2))
         return check_sum
 
-    def is_valid_card(self, card_num) -> bool:
+    def is_valid_card(self, card_num:str) -> bool:
         check_sum = self.find_check_sum(card_num)
         return check_sum%10 == 0
+
+if __name__ == '__main__':
+    sol_obj = SolutionCheckSum()
+    print(sol_obj.is_valid_card('4388576018402626')) # invalid
+    print(sol_obj.is_valid_card('4388576018410707')) # valid
+
+
 

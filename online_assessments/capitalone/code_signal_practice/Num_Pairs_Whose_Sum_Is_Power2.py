@@ -24,7 +24,7 @@ def solution(numbers:List[int]) -> int:
     count = 0
     for i in range(31):
         target = 2 ** i
-        prev_nums_set = set()
+        prev_nums_set = set() # works because of commutative property of addition
         for num in numbers:
             prev_nums_set.add(num)
             diff = target - num

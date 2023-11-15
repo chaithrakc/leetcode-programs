@@ -24,11 +24,12 @@ dictOfFortune500 = {
     "General Motors": 7
 }
 
-def get_company_by_ranking(companies:dict, rank:List[int]) -> List[str]:
+
+def get_company_by_ranking(companies: dict, rank: List[int]) -> List[str]:
     return list(map(lambda item: item[0],
                     filter(lambda item: item[1] in rank, companies.items())))
 
-if __name__ == '__main__':
-   rank5_comps =  get_company_by_ranking(dictOfFortune500, [5, 6])
-   print(rank5_comps)
 
+if __name__ == '__main__':
+    rank5_comps = get_company_by_ranking(dictOfFortune500, [5, 6])
+    print(rank5_comps)

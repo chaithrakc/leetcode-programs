@@ -18,7 +18,7 @@ if __name__ == '__main__':
     print(string_list)
 
     # Get a comma-separated string from a list of numbers
-    numList = [20,213,4587,7869]
+    numList = [20, 213, 4587, 7869]
     comma_delimited = str(numList).strip('[]')
     print(comma_delimited)
 
@@ -30,6 +30,3 @@ if __name__ == '__main__':
     # We can even use the new line character (‘\n’) as a separator.
     newline_str = '\n'.join(map(str, numList))
     print(newline_str)
-
-
-
